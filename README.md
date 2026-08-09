@@ -1,9 +1,9 @@
 <p align="center">
   <img src="helen-inbt/com-texto/01-kkkkk.webp" width="130" alt="Figurinha de exemplo: Helen rindo, legenda KKKKK">
   <img src="helen-inbt/com-texto/06-socorro.webp" width="130" alt="Figurinha de exemplo: Helen desesperada, legenda SOCORRO">
-  <img src="helen-inbt/com-texto/16-ideia.webp" width="130" alt="Figurinha de exemplo: Helen tendo uma ideia">
-  <img src="helen-inbt/com-texto/36-borderless.webp" width="130" alt="Figurinha de exemplo: Helen confiante, legenda BORDERLESS">
-  <img src="helen-inbt/com-texto/45-falaai.webp" width="130" alt="Figurinha de exemplo: Helen acenando, legenda FALA AI">
+  <img src="helen-inbt/com-texto/05-amei.webp" width="130" alt="Figurinha de exemplo: Helen fazendo coraçãozinho com os dedos, legenda AMEI">
+  <img src="helen-inbt/com-texto/30-quedia.webp" width="130" alt="Figurinha de exemplo: Helen na chuva com o guarda-chuva virado, legenda que dia">
+  <img src="helen-inbt/com-texto/23-euavisei.webp" width="130" alt="Figurinha de exemplo: Helen de óculos escuros e braços cruzados, legenda EU AVISEI">
 </p>
 
 <h1 align="center">Faça suas figurinhas</h1>
