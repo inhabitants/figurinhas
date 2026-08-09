@@ -22,6 +22,24 @@
 
 ---
 
+## Achou confuso? Deixa seu agente fazer
+
+Os seis passos abaixo existem pra quem quer entender a máquina. Se você só quer o pack, não precisa de nenhum deles: copia o texto abaixo, cola no seu agente (Claude, ChatGPT, Cursor, Gemini CLI, o que você já usa) e manda as fotos do personagem na mensagem seguinte. O kit tem um [AGENTS.md](AGENTS.md) que ele lê sozinho, e o resto é com ele: prompts, geração, recorte, legenda, pack fechado. Você só aprova as imagens.
+
+```
+Quero um pack de figurinhas do meu personagem pra WhatsApp e Telegram.
+
+Usa o kit open source https://github.com/inhabitants/figurinhas: baixa o repo, lê o AGENTS.md e segue a receita de lá (prompt com os três slots, recorte do verde chroma, legenda por código, montagem do pack).
+
+Eu te mando de 1 a 4 imagens de referência do personagem. A partir delas:
+1. monta os prompts e gera as variações de humor
+2. roda o recorte e me mostra as figurinhas 512x512 transparentes
+3. escreve as legendas em português nas que pedirem
+4. entrega a pasta pronta pra importar
+
+Me pergunta o que faltar antes de começar. As imagens vão na próxima mensagem.
+```
+
 ## Como funciona
 
 Seis passos, nenhum exige saber programar.
@@ -47,10 +65,6 @@ npm run pack -- --nome "Meu Pack" --autor "Você" --out packs
 ```
 
 **6. Instala e usa.** WhatsApp: um app de figurinha (Sticker Maker no Android, Sticker Maker Studio no iOS) importa cada pasta de uma vez. Telegram: BotFather → @Stickers → /newpack, sobe os arquivos (lá não tem o teto de 30). Seu personagem vive nas suas conversas.
-
-### Tem um agente? Ele faz por você
-
-O kit vem com um [AGENTS.md](AGENTS.md) que qualquer agente de código (Claude Code, Cursor, Gemini CLI) lê sozinho. Abre esta pasta no seu agente e pede **"faz o pack de figurinhas do meu personagem com essas fotos"**: ele monta os prompts, roda o recorte, desenha as legendas e entrega o pack. Você só aprova as imagens.
 
 ## A receita, aberta
 
