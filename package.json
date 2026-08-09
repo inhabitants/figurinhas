@@ -1,5 +1,5 @@
-{
-  "name": "helen-inbt-stickers",
+﻿{
+  "name": "figurinhas",
   "version": "1.0.0",
   "description": "Gerador open source de packs de figurinhas (receita de prompt, recorte chroma, legenda e pack), com as 45 da Helen INBT de template",
   "type": "module",
