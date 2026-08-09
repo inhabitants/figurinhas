@@ -1,7 +1,7 @@
 {
   "name": "helen-inbt-stickers",
   "version": "1.0.0",
-  "description": "Figurinhas da Helen INBT + o gerador aberto pra fazer o pack do seu personagem",
+  "description": "Gerador open source de packs de figurinhas (receita de prompt, recorte chroma, legenda e pack), com as 45 da Helen INBT de template",
   "type": "module",
   "scripts": {
     "recorta": "node tools/recorta.mjs",

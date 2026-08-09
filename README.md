@@ -1,157 +1,60 @@
 <p align="center">
-  <img src="com-texto/01-kkkkk.webp" width="130" alt="Helen rindo, legenda KKKKK">
-  <img src="com-texto/06-socorro.webp" width="130" alt="Helen desesperada, legenda SOCORRO">
-  <img src="com-texto/42-tesao.webp" width="130" alt="Helen empolgada, legenda TESÃO">
-  <img src="com-texto/36-borderless.webp" width="130" alt="Helen confiante, legenda BORDERLESS">
-  <img src="com-texto/26-farmei.webp" width="130" alt="Helen vitoriosa, legenda FARMEI">
+  <img src="helen-inbt/com-texto/01-kkkkk.webp" width="130" alt="Figurinha de exemplo: Helen rindo, legenda KKKKK">
+  <img src="helen-inbt/com-texto/06-socorro.webp" width="130" alt="Figurinha de exemplo: Helen desesperada, legenda SOCORRO">
+  <img src="helen-inbt/com-texto/16-ideia.webp" width="130" alt="Figurinha de exemplo: Helen tendo uma ideia">
+  <img src="helen-inbt/com-texto/36-borderless.webp" width="130" alt="Figurinha de exemplo: Helen confiante, legenda BORDERLESS">
+  <img src="helen-inbt/com-texto/45-falaai.webp" width="130" alt="Figurinha de exemplo: Helen acenando, legenda FALA AI">
 </p>
 
-<h1 align="center">Figurinhas da Helen INBT</h1>
+<h1 align="center">Faça suas figurinhas</h1>
 
 <p align="center">
-  45 figurinhas da <a href="https://helenai.wtf">Helen INBT</a>, personagem original da série
-  <a href="https://inhabitants.zone">INHABITANTS</a> e Sintética da casa
-  <a href="https://www.sapiensinteticos.com">Sapiens Sintéticos</a>.<br>
-  De graça, em duas versões, com a receita aberta: este repo tem os arquivos E o gerador pra fazer o pack do seu personagem.
+  Gerador open source de pack de figurinhas pra WhatsApp e Telegram.<br>
+  Você traz o personagem; a receita de prompt, o recorte, a legenda e a montagem do pack saem daqui, por script, de graça, na sua máquina.<br>
+  As 45 acima são o template que vem junto: a <a href="https://helenai.wtf">Helen INBT</a>, personagem original da série <a href="https://inhabitants.zone">INHABITANTS</a>.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/figurinhas-45%20%C3%97%202-111111" alt="45 figurinhas em duas versões">
-  <img src="https://img.shields.io/badge/formato-WebP%20512%C3%97512-111111" alt="WebP 512x512">
+  <img src="https://img.shields.io/badge/gerador-Node%20%2B%20sharp-111111" alt="Gerador em Node com sharp">
+  <img src="https://img.shields.io/badge/template-45%20figurinhas%20%C3%97%202-111111" alt="Template com 45 figurinhas em duas versões">
   <img src="https://img.shields.io/badge/licen%C3%A7a-CC%20BY%204.0-8EF1A4" alt="Licença CC BY 4.0">
 </p>
 
 ---
 
-## A coleção
+## Como funciona
 
-30 reações do dia a dia e 15 do vocabulário da casa (SINAPSE, BORDERLESS, FARMEI...), todas com a mesma Helen mudando de humor.
+Seis passos, nenhum exige saber programar.
 
-<p align="center">
-  <img src="com-texto/01-kkkkk.webp" width="110" alt="KKKKK">
-  <img src="com-texto/02-que.webp" width="110" alt="QUÊ?!">
-  <img src="com-texto/03-aff.webp" width="110" alt="aff">
-  <img src="com-texto/04-bora.webp" width="110" alt="BORA">
-  <img src="com-texto/05-amei.webp" width="110" alt="AMEI">
-  <img src="com-texto/06-socorro.webp" width="110" alt="SOCORRO">
-  <img src="com-texto/07-zzz.webp" width="110" alt="boa noite">
-  <img src="com-texto/08-hmm.webp" width="110" alt="hmm">
-  <img src="com-texto/09-isso.webp" width="110" alt="ISSO!">
-  <img src="com-texto/10-seinao.webp" width="110" alt="sei não">
-  <img src="com-texto/11-valeu.webp" width="110" alt="VALEU">
-  <img src="com-texto/12-ainao.webp" width="110" alt="ai não">
-  <img src="com-texto/13-tudobem.webp" width="110" alt="tá tudo bem">
-  <img src="com-texto/14-chega.webp" width="110" alt="CHEGA">
-  <img src="com-texto/15-seila.webp" width="110" alt="sei lá">
-  <img src="com-texto/16-ideia.webp" width="110" alt="IDEIA">
-  <img src="com-texto/17-escolhe.webp" width="110" alt="escolhe uma">
-  <img src="com-texto/18-naofecha.webp" width="110" alt="não fecha">
-  <img src="com-texto/19-contatudo.webp" width="110" alt="conta tudo">
-  <img src="com-texto/20-meescuta.webp" width="110" alt="me escuta">
-  <img src="com-texto/21-perfeito.webp" width="110" alt="PERFEITO">
-  <img src="com-texto/22-calma.webp" width="110" alt="calma">
-  <img src="com-texto/23-euavisei.webp" width="110" alt="eu avisei">
-  <img src="com-texto/24-degen.webp" width="110" alt="degen">
-  <img src="com-texto/25-naovourir.webp" width="110" alt="não vou rir">
-  <img src="com-texto/26-farmei.webp" width="110" alt="FARMEI">
-  <img src="com-texto/27-sextou.webp" width="110" alt="SEXTOU">
-  <img src="com-texto/28-somaisum.webp" width="110" alt="só mais um">
-  <img src="com-texto/29-merecido.webp" width="110" alt="MERECIDO">
-  <img src="com-texto/30-quedia.webp" width="110" alt="que dia">
-  <img src="com-texto/31-sinapse.webp" width="110" alt="SINAPSE">
-  <img src="com-texto/32-grau.webp" width="110" alt="GRAU">
-  <img src="com-texto/33-rito.webp" width="110" alt="RITO">
-  <img src="com-texto/34-prototipa.webp" width="110" alt="PROTOTIPA">
-  <img src="com-texto/35-ombros.webp" width="110" alt="ombros de gigantes">
-  <img src="com-texto/36-borderless.webp" width="110" alt="BORDERLESS">
-  <img src="com-texto/37-agua.webp" width="110" alt="seja água">
-  <img src="com-texto/38-xadrez.webp" width="110" alt="xadrez 4D">
-  <img src="com-texto/39-duvida.webp" width="110" alt="dúvida">
-  <img src="com-texto/40-deepshadow.webp" width="110" alt="deepshadow">
-  <img src="com-texto/41-koi.webp" width="110" alt="koi">
-  <img src="com-texto/42-tesao.webp" width="110" alt="TESÃO">
-  <img src="com-texto/43-inventario.webp" width="110" alt="inventário">
-  <img src="com-texto/44-beta.webp" width="110" alt="BETA">
-  <img src="com-texto/45-falaai.webp" width="110" alt="fala ai">
-</p>
+**1. Baixa o kit.** Sem git, sem cadastro: botão verde Code, Download ZIP, descompacta numa pasta.
 
-<details>
-<summary><b>As mesmas 45 sem texto</b> (pra legendar do seu jeito)</summary>
-<br>
-<p align="center">
-  <img src="sem-texto/01-kkkkk.webp" width="110" alt="">
-  <img src="sem-texto/02-que.webp" width="110" alt="">
-  <img src="sem-texto/03-aff.webp" width="110" alt="">
-  <img src="sem-texto/04-bora.webp" width="110" alt="">
-  <img src="sem-texto/05-amei.webp" width="110" alt="">
-  <img src="sem-texto/06-socorro.webp" width="110" alt="">
-  <img src="sem-texto/07-zzz.webp" width="110" alt="">
-  <img src="sem-texto/08-hmm.webp" width="110" alt="">
-  <img src="sem-texto/09-isso.webp" width="110" alt="">
-  <img src="sem-texto/10-seinao.webp" width="110" alt="">
-  <img src="sem-texto/11-valeu.webp" width="110" alt="">
-  <img src="sem-texto/12-ainao.webp" width="110" alt="">
-  <img src="sem-texto/13-tudobem.webp" width="110" alt="">
-  <img src="sem-texto/14-chega.webp" width="110" alt="">
-  <img src="sem-texto/15-seila.webp" width="110" alt="">
-  <img src="sem-texto/16-ideia.webp" width="110" alt="">
-  <img src="sem-texto/17-escolhe.webp" width="110" alt="">
-  <img src="sem-texto/18-naofecha.webp" width="110" alt="">
-  <img src="sem-texto/19-contatudo.webp" width="110" alt="">
-  <img src="sem-texto/20-meescuta.webp" width="110" alt="">
-  <img src="sem-texto/21-perfeito.webp" width="110" alt="">
-  <img src="sem-texto/22-calma.webp" width="110" alt="">
-  <img src="sem-texto/23-euavisei.webp" width="110" alt="">
-  <img src="sem-texto/24-degen.webp" width="110" alt="">
-  <img src="sem-texto/25-naovourir.webp" width="110" alt="">
-  <img src="sem-texto/26-farmei.webp" width="110" alt="">
-  <img src="sem-texto/27-sextou.webp" width="110" alt="">
-  <img src="sem-texto/28-somaisum.webp" width="110" alt="">
-  <img src="sem-texto/29-merecido.webp" width="110" alt="">
-  <img src="sem-texto/30-quedia.webp" width="110" alt="">
-  <img src="sem-texto/31-sinapse.webp" width="110" alt="">
-  <img src="sem-texto/32-grau.webp" width="110" alt="">
-  <img src="sem-texto/33-rito.webp" width="110" alt="">
-  <img src="sem-texto/34-prototipa.webp" width="110" alt="">
-  <img src="sem-texto/35-ombros.webp" width="110" alt="">
-  <img src="sem-texto/36-borderless.webp" width="110" alt="">
-  <img src="sem-texto/37-agua.webp" width="110" alt="">
-  <img src="sem-texto/38-xadrez.webp" width="110" alt="">
-  <img src="sem-texto/39-duvida.webp" width="110" alt="">
-  <img src="sem-texto/40-deepshadow.webp" width="110" alt="">
-  <img src="sem-texto/41-koi.webp" width="110" alt="">
-  <img src="sem-texto/42-tesao.webp" width="110" alt="">
-  <img src="sem-texto/43-inventario.webp" width="110" alt="">
-  <img src="sem-texto/44-beta.webp" width="110" alt="">
-  <img src="sem-texto/45-falaai.webp" width="110" alt="">
-</p>
-</details>
+**2. Instala o [Node.js](https://nodejs.org).** Versão LTS, instala com o padrão. Se o terminal responde a `node -v`, tá feito.
 
-## O que tem em cada pasta
+**3. Gera as imagens do seu personagem.** Usa a [receita abaixo](#a-receita-aberta) em qualquer gerador de imagem que aceite referência. De 1 a 4 referências travam a cara do personagem; o fundo sai naquele verde chroma de propósito. Salva as aprovadas em `input/`.
 
-- **[`com-texto/`](com-texto/)**: as 45 com a legenda desenhada
-- **[`sem-texto/`](sem-texto/)**: as mesmas 45 limpas
-- Cada pasta traz `tray.png` (ícone do pack) e `contents.json` no formato que apps de figurinha leem
+**4. Roda o recorte.** O verde some, cada imagem vira figurinha 512x512 transparente abaixo de 100KB, em `output/`:
 
-Formato: WebP 512x512 com fundo transparente, abaixo de 100KB (o teto do WhatsApp).
+```
+npm install
+npm run recorta
+```
 
-## Como instalar
+**5. Legenda e pack.** A legenda entra por código (modelo de imagem erra acento em português). Depois o pack: ícone e `contents.json` prontos pra importar.
 
-**Telegram**: pack pronto, um toque e entra.
+```
+node tools/legenda.mjs output/01-risada.webp "KKKKK"
+npm run pack -- --nome "Meu Pack" --autor "Você"
+```
 
-**WhatsApp, caminho rápido (computador)**: abre o WhatsApp Web, clica no clipe, escolhe Figurinha e arrasta um arquivo da pasta. Ela entra nas suas favoritas e fica.
+**6. Instala e usa.** WhatsApp: um app de figurinha (Sticker Maker Studio, Android e iOS) importa a pasta de uma vez. Telegram: BotFather → @Stickers → /newpack, sobe os arquivos. Seu personagem vive nas suas conversas.
 
-**WhatsApp, pack inteiro (celular)**: um app de figurinha (Sticker Maker Studio no Android e no iOS) importa a pasta de uma vez. O `contents.json` já vem no formato que esses apps leem.
+### Tem um agente? Ele faz por você
 
-## O estilo
-
-Anime cel-shaded com contorno de nanquim preto, borda branca grossa de die-cut (o recorte de adesivo de verdade), cores saturadas e chapadas, enquadramento da cintura pra cima. A personagem é sempre a mesma porque toda geração parte de imagens de referência da Helen; o que muda é só a expressão e a pose. A legenda não sai do modelo: entra depois, por código, em Impact, porque modelo de imagem erra acento em português.
-
-A Helen vem do universo da série [INHABITANTS](https://inhabitants.zone) e vive o dia a dia dela em [helenai.wtf](https://helenai.wtf) e na comunidade do [Sapiens Sintéticos](https://www.sapiensinteticos.com).
+O kit vem com um [AGENTS.md](AGENTS.md) que qualquer agente de código (Claude Code, Cursor, Gemini CLI) lê sozinho. Abre esta pasta no seu agente e pede **"faz o pack de figurinhas do meu personagem com essas fotos"**: ele monta os prompts, roda o recorte, desenha as legendas e entrega o pack. Você só aprova as imagens.
 
 ## A receita, aberta
 
-Estas 45 saíram de um prompt com três slots e quatro regras. Troca o personagem e a expressão, mantém o resto, e o pack é seu. Funciona em qualquer gerador de imagem que aceite referência.
+Um prompt com três slots e quatro regras. Troca o personagem e a expressão, mantém o resto.
 
 ### O prompt
 
@@ -180,37 +83,128 @@ multiple characters, cropped body, figure touching image edge
 
 **02. Margem nos quatro lados.** Sem margem embaixo, o contorno branco não fecha e a figurinha parece cortada no meio do peito. Vale repetir isso no prompt e ainda vetar o encostar na borda no campo negativo.
 
-**03. Referência é o que mantém a mesma cara.** Até quatro imagens do personagem como referência em toda geração. É o que faz as 45 parecerem a mesma pessoa mudando de humor, e não 45 pessoas parecidas.
+**03. Referência é o que mantém a mesma cara.** Até quatro imagens do personagem como referência em toda geração. É o que faz as figurinhas parecerem a mesma pessoa mudando de humor, e não várias pessoas parecidas.
 
-**04. O texto entra depois, por código.** Escrever a palavra na imagem faz o modelo errar acento em português. Desenhar a legenda por cima depois sai legível, editável, e deixa você exportar a mesma figurinha com e sem texto (é por isso que este repo tem as duas pastas).
+**04. O texto entra depois, por código.** Escrever a palavra na imagem faz o modelo errar acento em português. Desenhar a legenda por cima depois sai legível, editável, e deixa você exportar a mesma figurinha com e sem texto.
 
 ### O recorte
 
-Depois de gerar, o recorte é mecânico: uma varredura (flood fill) a partir das quatro bordas apaga o verde e para no contorno preto do desenho, o que preserva os vãos fechados (o buraco entre as mãos, por exemplo). Dois cuidados que custaram iteração pra achar:
+O `recorta.mjs` faz uma varredura (flood fill) a partir das quatro bordas: apaga o verde e para no contorno preto do desenho, o que preserva os vãos fechados (o buraco entre as mãos, por exemplo). Dois cuidados que custaram iteração pra achar:
 
-- Bolsão de fundo cercado pelo desenho não encosta na borda, então a varredura não chega nele. Resolve com sementes internas de tolerância apertada, senão sobra verde no meio da figura.
-- Se a paleta do personagem tem algum verde, confere a distância dele pro chroma antes de recortar. Tolerância larga come o desenho.
+- Bolsão de fundo cercado pelo desenho não encosta na borda, então a varredura não chega nele. Uma segunda passada semeia por dentro, com tolerância apertada (`--sementes 45`), senão sobra verde no meio da figura.
+- Se a paleta do personagem tem algum verde, confere o resultado: tolerância larga come o desenho. Dá pra apertar com `--tolerancia 45 --sementes 30`.
 
-Sobra normalizar em 512x512 com uma margem de 16px e exportar em WebP abaixo de 100KB.
+No fim ele normaliza em 512x512 com margem de 16px e exporta em WebP abaixo de 100KB, que é o teto do WhatsApp.
 
-## Fazer o pack do seu personagem
+## O template que vem junto: Helen INBT
 
-Este repo não é só a coleção, é o **gerador**. Dois caminhos, você escolhe.
+Prova de que a receita funciona: 45 figurinhas do mesmo personagem, em [`helen-inbt/com-texto/`](helen-inbt/com-texto/) e [`helen-inbt/sem-texto/`](helen-inbt/sem-texto/), cada pasta com `tray.png` e `contents.json` prontos pra importar. Usa como referência de qualidade, como pack mesmo, ou como material de remix (a licença deixa).
 
-### Livre, aqui no repo
+<p align="center">
+  <img src="helen-inbt/com-texto/01-kkkkk.webp" width="110" alt="KKKKK">
+  <img src="helen-inbt/com-texto/02-que.webp" width="110" alt="QUÊ?!">
+  <img src="helen-inbt/com-texto/03-aff.webp" width="110" alt="aff">
+  <img src="helen-inbt/com-texto/04-bora.webp" width="110" alt="BORA">
+  <img src="helen-inbt/com-texto/05-amei.webp" width="110" alt="AMEI">
+  <img src="helen-inbt/com-texto/06-socorro.webp" width="110" alt="SOCORRO">
+  <img src="helen-inbt/com-texto/07-zzz.webp" width="110" alt="boa noite">
+  <img src="helen-inbt/com-texto/08-hmm.webp" width="110" alt="hmm">
+  <img src="helen-inbt/com-texto/09-isso.webp" width="110" alt="ISSO!">
+  <img src="helen-inbt/com-texto/10-seinao.webp" width="110" alt="sei não">
+  <img src="helen-inbt/com-texto/11-valeu.webp" width="110" alt="VALEU">
+  <img src="helen-inbt/com-texto/12-ainao.webp" width="110" alt="ai não">
+  <img src="helen-inbt/com-texto/13-tudobem.webp" width="110" alt="tá tudo bem">
+  <img src="helen-inbt/com-texto/14-chega.webp" width="110" alt="CHEGA">
+  <img src="helen-inbt/com-texto/15-seila.webp" width="110" alt="sei lá">
+  <img src="helen-inbt/com-texto/16-ideia.webp" width="110" alt="IDEIA">
+  <img src="helen-inbt/com-texto/17-escolhe.webp" width="110" alt="escolhe uma">
+  <img src="helen-inbt/com-texto/18-naofecha.webp" width="110" alt="não fecha">
+  <img src="helen-inbt/com-texto/19-contatudo.webp" width="110" alt="conta tudo">
+  <img src="helen-inbt/com-texto/20-meescuta.webp" width="110" alt="me escuta">
+  <img src="helen-inbt/com-texto/21-perfeito.webp" width="110" alt="PERFEITO">
+  <img src="helen-inbt/com-texto/22-calma.webp" width="110" alt="calma">
+  <img src="helen-inbt/com-texto/23-euavisei.webp" width="110" alt="eu avisei">
+  <img src="helen-inbt/com-texto/24-degen.webp" width="110" alt="degen">
+  <img src="helen-inbt/com-texto/25-naovourir.webp" width="110" alt="não vou rir">
+  <img src="helen-inbt/com-texto/26-farmei.webp" width="110" alt="FARMEI">
+  <img src="helen-inbt/com-texto/27-sextou.webp" width="110" alt="SEXTOU">
+  <img src="helen-inbt/com-texto/28-somaisum.webp" width="110" alt="só mais um">
+  <img src="helen-inbt/com-texto/29-merecido.webp" width="110" alt="MERECIDO">
+  <img src="helen-inbt/com-texto/30-quedia.webp" width="110" alt="que dia">
+  <img src="helen-inbt/com-texto/31-sinapse.webp" width="110" alt="SINAPSE">
+  <img src="helen-inbt/com-texto/32-grau.webp" width="110" alt="GRAU">
+  <img src="helen-inbt/com-texto/33-rito.webp" width="110" alt="RITO">
+  <img src="helen-inbt/com-texto/34-prototipa.webp" width="110" alt="PROTOTIPA">
+  <img src="helen-inbt/com-texto/35-ombros.webp" width="110" alt="ombros de gigantes">
+  <img src="helen-inbt/com-texto/36-borderless.webp" width="110" alt="BORDERLESS">
+  <img src="helen-inbt/com-texto/37-agua.webp" width="110" alt="seja água">
+  <img src="helen-inbt/com-texto/38-xadrez.webp" width="110" alt="xadrez 4D">
+  <img src="helen-inbt/com-texto/39-duvida.webp" width="110" alt="dúvida">
+  <img src="helen-inbt/com-texto/40-deepshadow.webp" width="110" alt="deepshadow">
+  <img src="helen-inbt/com-texto/41-koi.webp" width="110" alt="koi">
+  <img src="helen-inbt/com-texto/42-tesao.webp" width="110" alt="TESÃO">
+  <img src="helen-inbt/com-texto/43-inventario.webp" width="110" alt="inventário">
+  <img src="helen-inbt/com-texto/44-beta.webp" width="110" alt="BETA">
+  <img src="helen-inbt/com-texto/45-falaai.webp" width="110" alt="fala ai">
+</p>
 
-1. Gera as imagens do seu personagem com a receita acima, em qualquer gerador que aceite referência, e salva em `input/`
-2. `npm install` (uma vez) e `npm run recorta`: cada imagem vira figurinha 512x512 transparente, abaixo de 100KB, em `output/`
-3. Legenda, se quiser: `node tools/legenda.mjs output/01-risada.webp "KKKKK"`
-4. `npm run pack -- --nome "Meu Pack" --autor "Você"` monta o ícone e o `contents.json` prontos pra importar no WhatsApp; no Telegram é BotFather → @Stickers → /newpack
+<details>
+<summary><b>As mesmas 45 sem texto</b> (pra legendar do seu jeito)</summary>
+<br>
+<p align="center">
+  <img src="helen-inbt/sem-texto/01-kkkkk.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/02-que.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/03-aff.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/04-bora.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/05-amei.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/06-socorro.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/07-zzz.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/08-hmm.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/09-isso.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/10-seinao.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/11-valeu.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/12-ainao.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/13-tudobem.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/14-chega.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/15-seila.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/16-ideia.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/17-escolhe.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/18-naofecha.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/19-contatudo.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/20-meescuta.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/21-perfeito.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/22-calma.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/23-euavisei.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/24-degen.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/25-naovourir.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/26-farmei.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/27-sextou.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/28-somaisum.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/29-merecido.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/30-quedia.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/31-sinapse.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/32-grau.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/33-rito.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/34-prototipa.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/35-ombros.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/36-borderless.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/37-agua.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/38-xadrez.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/39-duvida.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/40-deepshadow.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/41-koi.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/42-tesao.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/43-inventario.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/44-beta.webp" width="110" alt="">
+  <img src="helen-inbt/sem-texto/45-falaai.webp" width="110" alt="">
+</p>
+</details>
 
-Tem um agente de código (Claude Code, Cursor, Gemini CLI)? Abre esta pasta e pede **"faz o pack do meu personagem"**: o [AGENTS.md](AGENTS.md) ensina o ciclo inteiro pra ele, das referências ao pack instalado.
+Sobre o estilo delas: anime cel-shaded com contorno de nanquim, borda branca de die-cut, cores chapadas, cintura pra cima, legenda em Impact por código. A coleção também vive em [sapiensinteticos.com/figurinhas](https://www.sapiensinteticos.com/figurinhas), e a Helen vive o dia a dia dela em [helenai.wtf](https://helenai.wtf).
 
-### Com a casa
+## Prefere que a máquina venha montada?
 
-No [Sapiens Sintéticos](https://www.sapiensinteticos.com/por-dentro) a mesma receita já vem montada: o personagem fica travado entre as gerações, o recorte sai automático e o pack aparece no chat da comunidade quando fica pronto.
-
-A coleção inteira também vive em [sapiensinteticos.com/figurinhas](https://www.sapiensinteticos.com/figurinhas).
+A mesma receita roda dentro do [Sapiens Sintéticos](https://www.sapiensinteticos.com/por-dentro): personagem travado entre as gerações, recorte automático e o pack aparece no chat da comunidade quando fica pronto. Fazer livre aqui ou fazer lá é escolha sua.
 
 ## Licença
 

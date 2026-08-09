@@ -1,8 +1,9 @@
 # Instruções pra agentes: fazer um pack de figurinhas neste repo
 
-Você está no repo das figurinhas da Helen INBT, que é também um GERADOR: o usuário
-quer o pack do personagem DELE. Seu papel é conduzir o ciclo inteiro, da referência
-ao pack instalável. A receita completa (prompt, negative, as quatro regras) está no
+Você está num GERADOR open source de packs de figurinhas: o usuário quer o pack do
+personagem DELE, e as figurinhas da Helen INBT em `helen-inbt/` são o template de
+referência que vem junto. Seu papel é conduzir o ciclo inteiro, da referência ao
+pack instalável. A receita completa (prompt, negative, as quatro regras) está no
 [README](README.md), seção "A receita, aberta". Não improvise outra: ela existe
 porque cada regra custou iteração.
 
@@ -39,8 +40,8 @@ porque cada regra custou iteração.
 
 ## Regras
 
-- NUNCA altere as figurinhas da Helen (`com-texto/`, `sem-texto/`) nem o README:
-  o trabalho do usuário acontece em `input/` e `output/`.
+- NUNCA altere o template da Helen (`helen-inbt/`) nem o README: o trabalho do
+  usuário acontece em `input/` e `output/`.
 - O chroma é sempre #00E000, escrito no prompt. Não troque por outro verde.
 - Margem nos quatro lados é inegociável (sem ela o contorno branco não fecha).
 - Se a paleta do personagem tem verde, avise o usuário que o recorte pode
