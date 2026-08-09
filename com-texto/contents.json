@@ -1,0 +1,332 @@
+{
+  "android_play_store_link": "",
+  "ios_app_store_link": "",
+  "sticker_packs": [
+    {
+      "identifier": "unificado-com-texto",
+      "name": "Helen INBT",
+      "publisher": "Sapiens Sintéticos",
+      "tray_image_file": "tray.png",
+      "image_data_version": "1",
+      "avoid_cache": false,
+      "publisher_website": "https://sapiensinteticos.com",
+      "stickers": [
+        {
+          "image_file": "01-kkkkk.webp",
+          "emojis": [
+            "😂",
+            "🤣"
+          ]
+        },
+        {
+          "image_file": "02-que.webp",
+          "emojis": [
+            "😱",
+            "😨"
+          ]
+        },
+        {
+          "image_file": "03-aff.webp",
+          "emojis": [
+            "🙄",
+            "😒"
+          ]
+        },
+        {
+          "image_file": "04-bora.webp",
+          "emojis": [
+            "👍",
+            "😉"
+          ]
+        },
+        {
+          "image_file": "05-amei.webp",
+          "emojis": [
+            "❤️",
+            "🥰"
+          ]
+        },
+        {
+          "image_file": "06-socorro.webp",
+          "emojis": [
+            "😭",
+            "😩"
+          ]
+        },
+        {
+          "image_file": "07-zzz.webp",
+          "emojis": [
+            "😴",
+            "🌙"
+          ]
+        },
+        {
+          "image_file": "08-hmm.webp",
+          "emojis": [
+            "🤔",
+            "🧐"
+          ]
+        },
+        {
+          "image_file": "09-isso.webp",
+          "emojis": [
+            "🎉",
+            "💪"
+          ]
+        },
+        {
+          "image_file": "10-seinao.webp",
+          "emojis": [
+            "🤨",
+            "😑"
+          ]
+        },
+        {
+          "image_file": "11-valeu.webp",
+          "emojis": [
+            "😘",
+            "🙏"
+          ]
+        },
+        {
+          "image_file": "12-ainao.webp",
+          "emojis": [
+            "🤦",
+            "😞"
+          ]
+        },
+        {
+          "image_file": "13-tudobem.webp",
+          "emojis": [
+            "🔥",
+            "🙂"
+          ]
+        },
+        {
+          "image_file": "14-chega.webp",
+          "emojis": [
+            "😡",
+            "💢"
+          ]
+        },
+        {
+          "image_file": "15-seila.webp",
+          "emojis": [
+            "🤷",
+            "😕"
+          ]
+        },
+        {
+          "image_file": "16-ideia.webp",
+          "emojis": [
+            "🧠",
+            "💡"
+          ]
+        },
+        {
+          "image_file": "17-escolhe.webp",
+          "emojis": [
+            "😰",
+            "🔴"
+          ]
+        },
+        {
+          "image_file": "18-naofecha.webp",
+          "emojis": [
+            "🤯",
+            "🧮"
+          ]
+        },
+        {
+          "image_file": "19-contatudo.webp",
+          "emojis": [
+            "🍿",
+            "👀"
+          ]
+        },
+        {
+          "image_file": "20-meescuta.webp",
+          "emojis": [
+            "🤪",
+            "🧵"
+          ]
+        },
+        {
+          "image_file": "21-perfeito.webp",
+          "emojis": [
+            "🤌",
+            "👌"
+          ]
+        },
+        {
+          "image_file": "22-calma.webp",
+          "emojis": [
+            "😅",
+            "💦"
+          ]
+        },
+        {
+          "image_file": "23-euavisei.webp",
+          "emojis": [
+            "😎",
+            "🕶️"
+          ]
+        },
+        {
+          "image_file": "24-degen.webp",
+          "emojis": [
+            "🏃",
+            "💨"
+          ]
+        },
+        {
+          "image_file": "25-naovourir.webp",
+          "emojis": [
+            "🤭",
+            "😆"
+          ]
+        },
+        {
+          "image_file": "26-farmei.webp",
+          "emojis": [
+            "📈",
+            "💸"
+          ]
+        },
+        {
+          "image_file": "27-sextou.webp",
+          "emojis": [
+            "✌️",
+            "🌴"
+          ]
+        },
+        {
+          "image_file": "28-somaisum.webp",
+          "emojis": [
+            "💻",
+            "☕"
+          ]
+        },
+        {
+          "image_file": "29-merecido.webp",
+          "emojis": [
+            "👑",
+            "✨"
+          ]
+        },
+        {
+          "image_file": "30-quedia.webp",
+          "emojis": [
+            "🌧️",
+            "☔"
+          ]
+        },
+        {
+          "image_file": "31-sinapse.webp",
+          "emojis": [
+            "⚡",
+            "✨"
+          ]
+        },
+        {
+          "image_file": "32-grau.webp",
+          "emojis": [
+            "🏅",
+            "🎖️"
+          ]
+        },
+        {
+          "image_file": "33-rito.webp",
+          "emojis": [
+            "🔥",
+            "😤"
+          ]
+        },
+        {
+          "image_file": "34-prototipa.webp",
+          "emojis": [
+            "🛠️",
+            "📐"
+          ]
+        },
+        {
+          "image_file": "35-ombros.webp",
+          "emojis": [
+            "🗿",
+            "🔭"
+          ]
+        },
+        {
+          "image_file": "36-borderless.webp",
+          "emojis": [
+            "🤸",
+            "🌍"
+          ]
+        },
+        {
+          "image_file": "37-agua.webp",
+          "emojis": [
+            "💧",
+            "🌊"
+          ]
+        },
+        {
+          "image_file": "38-xadrez.webp",
+          "emojis": [
+            "♟️",
+            "🧩"
+          ]
+        },
+        {
+          "image_file": "39-duvida.webp",
+          "emojis": [
+            "🤨",
+            "🤖"
+          ]
+        },
+        {
+          "image_file": "40-deepshadow.webp",
+          "emojis": [
+            "🌓",
+            "🎬"
+          ]
+        },
+        {
+          "image_file": "41-koi.webp",
+          "emojis": [
+            "🐟",
+            "🍃"
+          ]
+        },
+        {
+          "image_file": "42-tesao.webp",
+          "emojis": [
+            "🔥",
+            "😍"
+          ]
+        },
+        {
+          "image_file": "43-inventario.webp",
+          "emojis": [
+            "🎒",
+            "🧰"
+          ]
+        },
+        {
+          "image_file": "44-beta.webp",
+          "emojis": [
+            "🚧",
+            "🙃"
+          ]
+        },
+        {
+          "image_file": "45-falaai.webp",
+          "emojis": [
+            "👋",
+            "💬"
+          ]
+        }
+      ]
+    }
+  ]
+}
