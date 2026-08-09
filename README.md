@@ -9,9 +9,10 @@
 <h1 align="center">Figurinhas da Helen INBT</h1>
 
 <p align="center">
-  45 figurinhas da <a href="https://helenai.wtf">Helen INBT</a>, a Sintética da casa
+  45 figurinhas da <a href="https://helenai.wtf">Helen INBT</a>, personagem original da série
+  <a href="https://inhabitants.zone">INHABITANTS</a> e Sintética da casa
   <a href="https://www.sapiensinteticos.com">Sapiens Sintéticos</a>.<br>
-  De graça, em duas versões, com a receita aberta: este repo tem os arquivos E o caminho pra fazer o pack do seu personagem.
+  De graça, em duas versões, com a receita aberta: este repo tem os arquivos E o gerador pra fazer o pack do seu personagem.
 </p>
 
 <p align="center">
@@ -146,6 +147,8 @@ Formato: WebP 512x512 com fundo transparente, abaixo de 100KB (o teto do WhatsAp
 
 Anime cel-shaded com contorno de nanquim preto, borda branca grossa de die-cut (o recorte de adesivo de verdade), cores saturadas e chapadas, enquadramento da cintura pra cima. A personagem é sempre a mesma porque toda geração parte de imagens de referência da Helen; o que muda é só a expressão e a pose. A legenda não sai do modelo: entra depois, por código, em Impact, porque modelo de imagem erra acento em português.
 
+A Helen vem do universo da série [INHABITANTS](https://inhabitants.zone) e vive o dia a dia dela em [helenai.wtf](https://helenai.wtf) e na comunidade do [Sapiens Sintéticos](https://www.sapiensinteticos.com).
+
 ## A receita, aberta
 
 Estas 45 saíram de um prompt com três slots e quatro regras. Troca o personagem e a expressão, mantém o resto, e o pack é seu. Funciona em qualquer gerador de imagem que aceite referência.
@@ -192,7 +195,20 @@ Sobra normalizar em 512x512 com uma margem de 16px e exportar em WebP abaixo de 
 
 ## Fazer o pack do seu personagem
 
-A receita acima roda em qualquer lugar. No [Sapiens Sintéticos](https://www.sapiensinteticos.com/por-dentro) ela já vem montada: o personagem fica travado entre as gerações, o recorte sai automático e o pack aparece no chat da comunidade quando fica pronto.
+Este repo não é só a coleção, é o **gerador**. Dois caminhos, você escolhe.
+
+### Livre, aqui no repo
+
+1. Gera as imagens do seu personagem com a receita acima, em qualquer gerador que aceite referência, e salva em `input/`
+2. `npm install` (uma vez) e `npm run recorta`: cada imagem vira figurinha 512x512 transparente, abaixo de 100KB, em `output/`
+3. Legenda, se quiser: `node tools/legenda.mjs output/01-risada.webp "KKKKK"`
+4. `npm run pack -- --nome "Meu Pack" --autor "Você"` monta o ícone e o `contents.json` prontos pra importar no WhatsApp; no Telegram é BotFather → @Stickers → /newpack
+
+Tem um agente de código (Claude Code, Cursor, Gemini CLI)? Abre esta pasta e pede **"faz o pack do meu personagem"**: o [AGENTS.md](AGENTS.md) ensina o ciclo inteiro pra ele, das referências ao pack instalado.
+
+### Com a casa
+
+No [Sapiens Sintéticos](https://www.sapiensinteticos.com/por-dentro) a mesma receita já vem montada: o personagem fica travado entre as gerações, o recorte sai automático e o pack aparece no chat da comunidade quando fica pronto.
 
 A coleção inteira também vive em [sapiensinteticos.com/figurinhas](https://www.sapiensinteticos.com/figurinhas).
 

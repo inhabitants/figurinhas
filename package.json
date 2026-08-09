@@ -1,0 +1,13 @@
+{
+  "name": "helen-inbt-stickers",
+  "version": "1.0.0",
+  "description": "Figurinhas da Helen INBT + o gerador aberto pra fazer o pack do seu personagem",
+  "type": "module",
+  "scripts": {
+    "recorta": "node tools/recorta.mjs",
+    "pack": "node tools/pack.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.33.0"
+  }
+}
