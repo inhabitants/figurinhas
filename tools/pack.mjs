@@ -3,12 +3,18 @@
 // contents.json no formato que os apps de figurinha do WhatsApp leem
 // (Sticker Maker Studio e afins).
 //
+// O WhatsApp aceita no MÁXIMO 30 figurinhas por pack (e no mínimo 3). Coleção
+// maior que isso não é erro seu: ela vira várias partes. Este script divide
+// sozinho e escreve cada parte numa pasta própria, pronta pra importar. Sem
+// isso o app engasga na importação e não diz por quê.
+//
 // Uso:
 //   node tools/pack.mjs --nome "Meu Pack" --autor "Seu Nome"
-//   node tools/pack.mjs --dir com-texto --tray com-texto/05-amei.webp --site https://seusite.com
+//   node tools/pack.mjs --dir helen-inbt/com-texto --out packs-whatsapp
+//   node tools/pack.mjs --dir output --tray output/05-amei.webp --site https://seusite.com
 
 import sharp from "sharp";
-import { readdirSync, writeFileSync, existsSync } from "node:fs";
+import { readdirSync, writeFileSync, existsSync, mkdirSync, copyFileSync } from "node:fs";
 import { join } from "node:path";
 
 const arg = (nome, padrao) => {
@@ -17,9 +23,11 @@ const arg = (nome, padrao) => {
 };
 
 const DIR = arg("dir", "output");
+const OUT = arg("out", null); // sem --out, escreve na própria pasta (pack único)
 const NOME = arg("nome", "Meu pack");
 const AUTOR = arg("autor", "");
 const SITE = arg("site", "");
+const TETO = 30; // limite do WhatsApp por pack
 
 if (!existsSync(DIR)) {
     console.error(`A pasta "${DIR}/" não existe. Roda o recorte primeiro: node tools/recorta.mjs`);
@@ -31,33 +39,52 @@ if (figurinhas.length < 3) {
     process.exit(1);
 }
 
-// O tray é o ícone do pack: 96x96 PNG. Sai da primeira figurinha, ou da que
-// você escolher com --tray.
-const trayDe = arg("tray", join(DIR, figurinhas[0]));
-await sharp(trayDe).resize(96, 96).png().toFile(join(DIR, "tray.png"));
+const slug = (s) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
-// Emoji fica de placeholder: é você (ou o agente) quem sabe qual emoji casa
-// com cada expressão. Edita o contents.json antes de importar.
-const contents = {
-    android_play_store_link: "",
-    ios_app_store_link: "",
-    sticker_packs: [
-        {
-            identifier: NOME.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
-            name: NOME,
-            publisher: AUTOR,
-            tray_image_file: "tray.png",
-            image_data_version: "1",
-            avoid_cache: false,
-            publisher_website: SITE,
-            stickers: figurinhas.map((f) => ({ image_file: f, emojis: ["🙂"] })),
-        },
-    ],
-};
-writeFileSync(join(DIR, "contents.json"), JSON.stringify(contents, null, 2) + "\n");
+// Divide em partes de até 30, preservando a ordem dos arquivos.
+const partes = [];
+for (let i = 0; i < figurinhas.length; i += TETO) partes.push(figurinhas.slice(i, i + TETO));
 
-console.log(`ok  ${figurinhas.length} figurinhas no pack "${NOME}"`);
-console.log(`    ${join(DIR, "tray.png")} + ${join(DIR, "contents.json")}`);
-console.log(`\nAgora troca os emojis 🙂 do contents.json pelos que casam com cada expressão`);
-console.log(`e importa a pasta num app de figurinha (Sticker Maker Studio no Android/iOS).`);
-console.log(`No Telegram: BotFather -> @Stickers -> /newpack, subindo os arquivos da pasta.`);
+for (const [idx, lote] of partes.entries()) {
+    const parte = idx + 1;
+    const nome = partes.length > 1 ? `${NOME} ${parte}` : NOME;
+    // Uma pasta por parte quando há --out; sem ele, escreve na pasta de origem
+    // (só faz sentido pra coleção que já cabe num pack).
+    const destino = OUT ? join(OUT, `${slug(NOME)}-${parte}`) : DIR;
+    mkdirSync(destino, { recursive: true });
+
+    if (OUT) for (const f of lote) copyFileSync(join(DIR, f), join(destino, f));
+
+    // O tray é o ícone do pack: 96x96 PNG. Sai da primeira figurinha da parte,
+    // ou da que você escolher com --tray.
+    const trayDe = arg("tray", join(DIR, lote[0]));
+    await sharp(trayDe).resize(96, 96).png().toFile(join(destino, "tray.png"));
+
+    // Emoji fica de placeholder: é você (ou o agente) quem sabe qual emoji casa
+    // com cada expressão. Edita o contents.json antes de importar.
+    const contents = {
+        android_play_store_link: "",
+        ios_app_store_link: "",
+        sticker_packs: [
+            {
+                identifier: `${slug(NOME)}-${parte}`,
+                name: nome,
+                publisher: AUTOR,
+                tray_image_file: "tray.png",
+                image_data_version: "1",
+                avoid_cache: false,
+                publisher_website: SITE,
+                stickers: lote.map((f) => ({ image_file: f, emojis: ["🙂"] })),
+            },
+        ],
+    };
+    writeFileSync(join(destino, "contents.json"), JSON.stringify(contents, null, 2) + "\n");
+    console.log(`ok  "${nome}": ${lote.length} figurinhas em ${destino}/`);
+}
+
+if (partes.length > 1) {
+    console.log(`\nSão ${partes.length} packs porque o WhatsApp aceita no máximo ${TETO} por pack.`);
+}
+console.log(`\nTroca os emojis 🙂 do contents.json pelos que casam com cada expressão`);
+console.log(`e importa cada pasta num app de figurinha (Sticker Maker no Android, Sticker Maker Studio no iOS).`);
+console.log(`No Telegram não tem esse teto: BotFather -> @Stickers -> /newpack, subindo tudo de uma vez.`);

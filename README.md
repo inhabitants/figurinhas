@@ -39,14 +39,14 @@ npm install
 npm run recorta
 ```
 
-**5. Legenda e pack.** A legenda entra por código (modelo de imagem erra acento em português). Depois o pack: ícone e `contents.json` prontos pra importar.
+**5. Legenda e pack.** A legenda entra por código (modelo de imagem erra acento em português). Depois o pack: ícone e `contents.json` prontos pra importar. O WhatsApp aceita no máximo 30 figurinhas por pack, então coleção maior sai quebrada em partes sozinha, uma pasta cada.
 
 ```
 node tools/legenda.mjs output/01-risada.webp "KKKKK"
-npm run pack -- --nome "Meu Pack" --autor "Você"
+npm run pack -- --nome "Meu Pack" --autor "Você" --out packs
 ```
 
-**6. Instala e usa.** WhatsApp: um app de figurinha (Sticker Maker Studio, Android e iOS) importa a pasta de uma vez. Telegram: BotFather → @Stickers → /newpack, sobe os arquivos. Seu personagem vive nas suas conversas.
+**6. Instala e usa.** WhatsApp: um app de figurinha (Sticker Maker no Android, Sticker Maker Studio no iOS) importa cada pasta de uma vez. Telegram: BotFather → @Stickers → /newpack, sobe os arquivos (lá não tem o teto de 30). Seu personagem vive nas suas conversas.
 
 ### Tem um agente? Ele faz por você
 
