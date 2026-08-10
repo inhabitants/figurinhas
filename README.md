@@ -1,81 +1,85 @@
 <p align="center">
-  <img src="helen-inbt/com-texto/01-kkkkk.webp" width="130" alt="Figurinha de exemplo: Helen rindo, legenda KKKKK">
-  <img src="helen-inbt/com-texto/06-socorro.webp" width="130" alt="Figurinha de exemplo: Helen desesperada, legenda SOCORRO">
-  <img src="helen-inbt/com-texto/05-amei.webp" width="130" alt="Figurinha de exemplo: Helen fazendo coraçãozinho com os dedos, legenda AMEI">
-  <img src="helen-inbt/com-texto/30-quedia.webp" width="130" alt="Figurinha de exemplo: Helen na chuva com o guarda-chuva virado, legenda que dia">
-  <img src="helen-inbt/com-texto/23-euavisei.webp" width="130" alt="Figurinha de exemplo: Helen de óculos escuros e braços cruzados, legenda EU AVISEI">
+  <img src="helen-inbt/com-texto/01-kkkkk.webp" width="130" alt="Sample sticker: Helen laughing, caption KKKKK">
+  <img src="helen-inbt/com-texto/06-socorro.webp" width="130" alt="Sample sticker: Helen panicking, caption SOCORRO (help)">
+  <img src="helen-inbt/com-texto/05-amei.webp" width="130" alt="Sample sticker: Helen making a finger heart, caption AMEI (loved it)">
+  <img src="helen-inbt/com-texto/30-quedia.webp" width="130" alt="Sample sticker: Helen in the rain with a flipped umbrella, caption que dia (what a day)">
+  <img src="helen-inbt/com-texto/23-euavisei.webp" width="130" alt="Sample sticker: Helen in sunglasses with crossed arms, caption eu avisei (I told you so)">
 </p>
 
-<h1 align="center">Faça suas figurinhas</h1>
+<h1 align="center">Make your own stickers</h1>
 
 <p align="center">
-  Gerador open source de pack de figurinhas pra WhatsApp e Telegram.<br>
-  Você traz o personagem; a receita de prompt, o recorte, a legenda e a montagem do pack saem daqui, por script, de graça, na sua máquina.<br>
-  As 45 acima são o template que vem junto: a <a href="https://helenai.wtf">Helen INBT</a>, personagem original da série <a href="https://inhabitants.zone">INHABITANTS</a>.
+  Open source sticker pack generator for WhatsApp and Telegram.<br>
+  You bring the character; the prompt recipe, the cutout, the caption and the pack assembly come from here, by script, for free, on your own machine.<br>
+  The 45 above are the template that ships with it: <a href="https://helenai.wtf">Helen INBT</a>, an original character from the <a href="https://inhabitants.zone">INHABITANTS</a> series.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/gerador-Node%20%2B%20sharp-111111" alt="Gerador em Node com sharp">
-  <img src="https://img.shields.io/badge/template-45%20figurinhas%20%C3%97%202-111111" alt="Template com 45 figurinhas em duas versões">
-  <img src="https://img.shields.io/badge/licen%C3%A7a-CC%20BY%204.0-8EF1A4" alt="Licença CC BY 4.0">
+  <a href="README.pt-BR.md">Português (BR)</a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/generator-Node%20%2B%20sharp-111111" alt="Generator in Node with sharp">
+  <img src="https://img.shields.io/badge/template-45%20stickers%20%C3%97%202-111111" alt="Template with 45 stickers in two versions">
+  <img src="https://img.shields.io/badge/license-CC%20BY%204.0-8EF1A4" alt="License CC BY 4.0">
 </p>
 
 ---
 
-## Achou confuso? Deixa seu agente fazer
+## Confused? Let your agent do it
 
-Os seis passos abaixo existem pra quem quer entender a máquina. Se você só quer o pack, não precisa de nenhum deles: copia o texto abaixo, cola no seu agente (Claude, ChatGPT, Cursor, Gemini CLI, o que você já usa) e manda as fotos do personagem na mensagem seguinte. O kit tem um [AGENTS.md](AGENTS.md) que ele lê sozinho, e o resto é com ele: prompts, geração, recorte, legenda, pack fechado. Você só aprova as imagens.
+The six steps below exist for people who want to understand the machine. If you just want the pack, you need none of them: copy the text below, paste it into your agent (Claude, ChatGPT, Cursor, Gemini CLI, whatever you already use) and send the character photos in the next message. The kit ships an [AGENTS.md](AGENTS.md) that it reads on its own, and the rest is on it: prompts, generation, cutout, captions, finished pack. You only approve the images.
 
 ```
-Quero um pack de figurinhas do meu personagem pra WhatsApp e Telegram.
+I want a sticker pack of my character for WhatsApp and Telegram.
 
-Usa o kit open source https://github.com/inhabitants/figurinhas: baixa o repo, lê o AGENTS.md e segue a receita de lá (prompt com os três slots, recorte do verde chroma, legenda por código, montagem do pack).
+Use the open source kit https://github.com/inhabitants/stickers: download the repo, read AGENTS.md and follow the recipe in there (prompt with the three slots, chroma green cutout, captions in code, pack assembly).
 
-Eu te mando de 1 a 4 imagens de referência do personagem. A partir delas:
-1. monta os prompts e gera as variações de humor
-2. roda o recorte e me mostra as figurinhas 512x512 transparentes
-3. escreve as legendas em português nas que pedirem
-4. entrega a pasta pronta pra importar
+I will send you 1 to 4 reference images of the character. From those:
+1. build the prompts and generate the mood variations
+2. run the cutout and show me the 512x512 transparent stickers
+3. write the captions on the ones that need them
+4. hand me the folder ready to import
 
-Me pergunta o que faltar antes de começar. As imagens vão na próxima mensagem.
+Ask me whatever is missing before you start. The images come in the next message.
 ```
 
-## Como funciona
+## How it works
 
-Seis passos, nenhum exige saber programar.
+Six steps, none of them requires knowing how to program.
 
-**1. Baixa o kit.** Sem git, sem cadastro: botão verde Code, Download ZIP, descompacta numa pasta.
+**1. Download the kit.** No git, no signup: green Code button, Download ZIP, unzip it into a folder.
 
-**2. Instala o [Node.js](https://nodejs.org).** Versão LTS, instala com o padrão. Se o terminal responde a `node -v`, tá feito.
+**2. Install [Node.js](https://nodejs.org).** LTS version, default install. If your terminal answers `node -v`, you are done.
 
-**3. Gera as imagens do seu personagem.** Usa a [receita abaixo](#a-receita-aberta) em qualquer gerador de imagem que aceite referência. De 1 a 4 referências travam a cara do personagem; o fundo sai naquele verde chroma de propósito. Salva as aprovadas em `input/`.
+**3. Generate your character's images.** Use the [recipe below](#the-recipe-open) in any image generator that accepts references. From 1 to 4 references lock the character's face; the background comes out that chroma green on purpose. Save the approved ones in `input/`.
 
-**4. Roda o recorte.** O verde some, cada imagem vira figurinha 512x512 transparente abaixo de 100KB, em `output/`:
+**4. Run the cutout.** The green disappears, each image becomes a transparent 512x512 sticker under 100KB, in `output/`:
 
 ```
 npm install
-npm run recorta
+npm run cutout
 ```
 
-**5. Legenda e pack.** A legenda entra por código (modelo de imagem erra acento em português). Depois o pack: ícone e `contents.json` prontos pra importar. O WhatsApp aceita no máximo 30 figurinhas por pack, então coleção maior sai quebrada em partes sozinha, uma pasta cada.
+**5. Caption and pack.** The caption goes on in code (image models get accented characters wrong). Then the pack: icon and `contents.json` ready to import. WhatsApp accepts at most 30 stickers per pack, so a bigger collection is split into parts on its own, one folder each.
 
 ```
-node tools/legenda.mjs output/01-risada.webp "KKKKK"
-npm run pack -- --nome "Meu Pack" --autor "Você" --out packs
+npm run caption -- output/01-laugh.webp "LOL"
+npm run pack -- --name "My Pack" --author "You" --out packs
 ```
 
-**6. Instala e usa.** WhatsApp: um app de figurinha (Sticker Maker no Android, Sticker Maker Studio no iOS) importa cada pasta de uma vez. Telegram: BotFather → @Stickers → /newpack, sobe os arquivos (lá não tem o teto de 30). Seu personagem vive nas suas conversas.
+**6. Install and use.** WhatsApp: a sticker app (Sticker Maker on Android, Sticker Maker Studio on iOS) imports each folder in one go. Telegram: BotFather → @Stickers → /newpack, upload the files (no 30 ceiling there). Your character lives in your conversations.
 
-## A receita, aberta
+## The recipe, open
 
-Um prompt com três slots e quatro regras. Troca o personagem e a expressão, mantém o resto.
+One prompt with three slots and four rules. Swap the character and the expression, keep the rest.
 
-### O prompt
+### The prompt
 
 ```
 Anime cel-shaded die-cut sticker of the exact same character
-as in the reference images: [TRAÇOS FIXOS: cabelo, olhos, pele, roupa].
-[A EXPRESSÃO E A POSE DESTA FIGURINHA].
+as in the reference images: [FIXED TRAITS: hair, eyes, skin, outfit].
+[THE EXPRESSION AND POSE FOR THIS STICKER].
 Waist-up framing, the complete figure sits fully inside the square with a clear
 empty margin on all four sides including below. Bold clean black ink outline,
 thick white sticker cut border closing all the way around, flat cel shading,
@@ -83,7 +87,7 @@ vivid saturated colors. The entire background is one solid flat pure chroma
 green (#00E000), perfectly uniform and empty.
 ```
 
-### O que vetar (negative prompt)
+### What to veto (negative prompt)
 
 ```
 background scenery, background objects, gradient background,
@@ -91,79 +95,79 @@ drop shadow on background, text, letters, watermark, frame, panel,
 multiple characters, cropped body, figure touching image edge
 ```
 
-### As quatro regras
+### The four rules
 
-**01. Fundo verde chroma, sempre o mesmo.** O verde puro (#00E000) existe pra ser apagado depois. Como ele não aparece em lugar nenhum do desenho, dá pra recortar por código, sem modelo de recorte e sem custo. Peça um fundo liso e uniforme, nunca um degradê.
+**01. Chroma green background, always the same one.** Pure green (#00E000) exists to be erased later. Since it appears nowhere in the drawing, the cutout can happen in code, with no segmentation model and no cost. Ask for a flat, uniform background, never a gradient.
 
-**02. Margem nos quatro lados.** Sem margem embaixo, o contorno branco não fecha e a figurinha parece cortada no meio do peito. Vale repetir isso no prompt e ainda vetar o encostar na borda no campo negativo.
+**02. Margin on all four sides.** Without a margin at the bottom, the white border does not close and the sticker looks cut off mid-chest. Worth repeating in the prompt and also vetoing "touching the edge" in the negative field.
 
-**03. Referência é o que mantém a mesma cara.** Até quatro imagens do personagem como referência em toda geração. É o que faz as figurinhas parecerem a mesma pessoa mudando de humor, e não várias pessoas parecidas.
+**03. References are what keep the same face.** Up to four images of the character as references on every generation. That is what makes the stickers look like one person changing moods instead of several similar people.
 
-**04. O texto entra depois, por código.** Escrever a palavra na imagem faz o modelo errar acento em português. Desenhar a legenda por cima depois sai legível, editável, e deixa você exportar a mesma figurinha com e sem texto.
+**04. Text goes on afterwards, in code.** Writing the word into the image makes the model butcher accented characters. Drawing the caption on top later comes out legible, editable, and lets you export the same sticker with and without text.
 
-### O recorte
+### The cutout
 
-O `recorta.mjs` faz uma varredura (flood fill) a partir das quatro bordas: apaga o verde e para no contorno preto do desenho, o que preserva os vãos fechados (o buraco entre as mãos, por exemplo). Dois cuidados que custaram iteração pra achar:
+`cutout.mjs` runs a flood fill seeded from the four edges: it erases the green and stops at the drawing's black outline, which preserves enclosed gaps (the hole between two hands, for example). Two details that cost iteration to find:
 
-- Bolsão de fundo cercado pelo desenho não encosta na borda, então a varredura não chega nele. Uma segunda passada semeia por dentro, com tolerância apertada (`--sementes 45`), senão sobra verde no meio da figura.
-- Se a paleta do personagem tem algum verde, confere o resultado: tolerância larga come o desenho. Dá pra apertar com `--tolerancia 45 --sementes 30`.
+- A pocket of background fenced in by the drawing never touches an edge, so the fill never reaches it. A second pass seeds from the inside with a tight tolerance (`--seeds 45`), otherwise green survives in the middle of the figure.
+- If your character's palette has any green in it, check the result: a loose tolerance eats the drawing. Tighten it with `--tolerance 45 --seeds 30`.
 
-No fim ele normaliza em 512x512 com margem de 16px e exporta em WebP abaixo de 100KB, que é o teto do WhatsApp.
+At the end it normalizes to 512x512 with a 16px margin and exports WebP under 100KB, WhatsApp's ceiling.
 
-## O template que vem junto: Helen INBT
+## The bundled template: Helen INBT
 
-Prova de que a receita funciona: 45 figurinhas do mesmo personagem, em [`helen-inbt/com-texto/`](helen-inbt/com-texto/) e [`helen-inbt/sem-texto/`](helen-inbt/sem-texto/), cada pasta com `tray.png` e `contents.json` prontos pra importar. Usa como referência de qualidade, como pack mesmo, ou como material de remix (a licença deixa).
+Proof that the recipe works: 45 stickers of the same character, in [`helen-inbt/com-texto/`](helen-inbt/com-texto/) (captioned) and [`helen-inbt/sem-texto/`](helen-inbt/sem-texto/) (clean), each folder with `tray.png` and `contents.json` ready to import. Use it as a quality reference, as an actual pack, or as remix material (the license allows it). The captions are in Brazilian Portuguese, which is the language Helen speaks.
 
 <p align="center">
-  <img src="helen-inbt/com-texto/01-kkkkk.webp" width="110" alt="KKKKK">
-  <img src="helen-inbt/com-texto/02-que.webp" width="110" alt="QUÊ?!">
-  <img src="helen-inbt/com-texto/03-aff.webp" width="110" alt="aff">
-  <img src="helen-inbt/com-texto/04-bora.webp" width="110" alt="BORA">
-  <img src="helen-inbt/com-texto/05-amei.webp" width="110" alt="AMEI">
-  <img src="helen-inbt/com-texto/06-socorro.webp" width="110" alt="SOCORRO">
-  <img src="helen-inbt/com-texto/07-zzz.webp" width="110" alt="boa noite">
+  <img src="helen-inbt/com-texto/01-kkkkk.webp" width="110" alt="lol">
+  <img src="helen-inbt/com-texto/02-que.webp" width="110" alt="what?!">
+  <img src="helen-inbt/com-texto/03-aff.webp" width="110" alt="ugh">
+  <img src="helen-inbt/com-texto/04-bora.webp" width="110" alt="let's go">
+  <img src="helen-inbt/com-texto/05-amei.webp" width="110" alt="loved it">
+  <img src="helen-inbt/com-texto/06-socorro.webp" width="110" alt="help">
+  <img src="helen-inbt/com-texto/07-zzz.webp" width="110" alt="good night">
   <img src="helen-inbt/com-texto/08-hmm.webp" width="110" alt="hmm">
-  <img src="helen-inbt/com-texto/09-isso.webp" width="110" alt="ISSO!">
-  <img src="helen-inbt/com-texto/10-seinao.webp" width="110" alt="sei não">
-  <img src="helen-inbt/com-texto/11-valeu.webp" width="110" alt="VALEU">
-  <img src="helen-inbt/com-texto/12-ainao.webp" width="110" alt="ai não">
-  <img src="helen-inbt/com-texto/13-tudobem.webp" width="110" alt="tá tudo bem">
-  <img src="helen-inbt/com-texto/14-chega.webp" width="110" alt="CHEGA">
-  <img src="helen-inbt/com-texto/15-seila.webp" width="110" alt="sei lá">
-  <img src="helen-inbt/com-texto/16-ideia.webp" width="110" alt="IDEIA">
-  <img src="helen-inbt/com-texto/17-escolhe.webp" width="110" alt="escolhe uma">
-  <img src="helen-inbt/com-texto/18-naofecha.webp" width="110" alt="não fecha">
-  <img src="helen-inbt/com-texto/19-contatudo.webp" width="110" alt="conta tudo">
-  <img src="helen-inbt/com-texto/20-meescuta.webp" width="110" alt="me escuta">
-  <img src="helen-inbt/com-texto/21-perfeito.webp" width="110" alt="PERFEITO">
-  <img src="helen-inbt/com-texto/22-calma.webp" width="110" alt="calma">
-  <img src="helen-inbt/com-texto/23-euavisei.webp" width="110" alt="eu avisei">
+  <img src="helen-inbt/com-texto/09-isso.webp" width="110" alt="that's it!">
+  <img src="helen-inbt/com-texto/10-seinao.webp" width="110" alt="not so sure">
+  <img src="helen-inbt/com-texto/11-valeu.webp" width="110" alt="thanks">
+  <img src="helen-inbt/com-texto/12-ainao.webp" width="110" alt="oh no">
+  <img src="helen-inbt/com-texto/13-tudobem.webp" width="110" alt="it's all fine">
+  <img src="helen-inbt/com-texto/14-chega.webp" width="110" alt="enough">
+  <img src="helen-inbt/com-texto/15-seila.webp" width="110" alt="whatever">
+  <img src="helen-inbt/com-texto/16-ideia.webp" width="110" alt="idea">
+  <img src="helen-inbt/com-texto/17-escolhe.webp" width="110" alt="pick one">
+  <img src="helen-inbt/com-texto/18-naofecha.webp" width="110" alt="doesn't add up">
+  <img src="helen-inbt/com-texto/19-contatudo.webp" width="110" alt="tell me everything">
+  <img src="helen-inbt/com-texto/20-meescuta.webp" width="110" alt="listen to me">
+  <img src="helen-inbt/com-texto/21-perfeito.webp" width="110" alt="perfect">
+  <img src="helen-inbt/com-texto/22-calma.webp" width="110" alt="easy there">
+  <img src="helen-inbt/com-texto/23-euavisei.webp" width="110" alt="I told you so">
   <img src="helen-inbt/com-texto/24-degen.webp" width="110" alt="degen">
-  <img src="helen-inbt/com-texto/25-naovourir.webp" width="110" alt="não vou rir">
-  <img src="helen-inbt/com-texto/26-farmei.webp" width="110" alt="FARMEI">
-  <img src="helen-inbt/com-texto/27-sextou.webp" width="110" alt="SEXTOU">
-  <img src="helen-inbt/com-texto/28-somaisum.webp" width="110" alt="só mais um">
-  <img src="helen-inbt/com-texto/29-merecido.webp" width="110" alt="MERECIDO">
-  <img src="helen-inbt/com-texto/30-quedia.webp" width="110" alt="que dia">
-  <img src="helen-inbt/com-texto/31-sinapse.webp" width="110" alt="SINAPSE">
-  <img src="helen-inbt/com-texto/32-grau.webp" width="110" alt="GRAU">
-  <img src="helen-inbt/com-texto/33-rito.webp" width="110" alt="RITO">
-  <img src="helen-inbt/com-texto/34-prototipa.webp" width="110" alt="PROTOTIPA">
-  <img src="helen-inbt/com-texto/35-ombros.webp" width="110" alt="ombros de gigantes">
-  <img src="helen-inbt/com-texto/36-borderless.webp" width="110" alt="BORDERLESS">
-  <img src="helen-inbt/com-texto/37-agua.webp" width="110" alt="seja água">
-  <img src="helen-inbt/com-texto/38-xadrez.webp" width="110" alt="xadrez 4D">
-  <img src="helen-inbt/com-texto/39-duvida.webp" width="110" alt="dúvida">
+  <img src="helen-inbt/com-texto/25-naovourir.webp" width="110" alt="not gonna laugh">
+  <img src="helen-inbt/com-texto/26-farmei.webp" width="110" alt="farmed it">
+  <img src="helen-inbt/com-texto/27-sextou.webp" width="110" alt="it's friday">
+  <img src="helen-inbt/com-texto/28-somaisum.webp" width="110" alt="just one more">
+  <img src="helen-inbt/com-texto/29-merecido.webp" width="110" alt="well deserved">
+  <img src="helen-inbt/com-texto/30-quedia.webp" width="110" alt="what a day">
+  <img src="helen-inbt/com-texto/31-sinapse.webp" width="110" alt="synapse">
+  <img src="helen-inbt/com-texto/32-grau.webp" width="110" alt="grau">
+  <img src="helen-inbt/com-texto/33-rito.webp" width="110" alt="rite">
+  <img src="helen-inbt/com-texto/34-prototipa.webp" width="110" alt="prototype it">
+  <img src="helen-inbt/com-texto/35-ombros.webp" width="110" alt="shoulders of giants">
+  <img src="helen-inbt/com-texto/36-borderless.webp" width="110" alt="borderless">
+  <img src="helen-inbt/com-texto/37-agua.webp" width="110" alt="be water">
+  <img src="helen-inbt/com-texto/38-xadrez.webp" width="110" alt="4D chess">
+  <img src="helen-inbt/com-texto/39-duvida.webp" width="110" alt="doubt">
   <img src="helen-inbt/com-texto/40-deepshadow.webp" width="110" alt="deepshadow">
   <img src="helen-inbt/com-texto/41-koi.webp" width="110" alt="koi">
-  <img src="helen-inbt/com-texto/42-tesao.webp" width="110" alt="TESÃO">
-  <img src="helen-inbt/com-texto/43-inventario.webp" width="110" alt="inventário">
-  <img src="helen-inbt/com-texto/44-beta.webp" width="110" alt="BETA">
-  <img src="helen-inbt/com-texto/45-falaai.webp" width="110" alt="fala ai">
+  <img src="helen-inbt/com-texto/42-tesao.webp" width="110" alt="tesão">
+  <img src="helen-inbt/com-texto/43-inventario.webp" width="110" alt="inventory">
+  <img src="helen-inbt/com-texto/44-beta.webp" width="110" alt="beta">
+  <img src="helen-inbt/com-texto/45-falaai.webp" width="110" alt="what's up">
 </p>
 
 <details>
-<summary><b>As mesmas 45 sem texto</b> (pra legendar do seu jeito)</summary>
+<summary><b>The same 45 without text</b> (to caption your own way)</summary>
 <br>
 <p align="center">
   <img src="helen-inbt/sem-texto/01-kkkkk.webp" width="110" alt="">
@@ -214,12 +218,12 @@ Prova de que a receita funciona: 45 figurinhas do mesmo personagem, em [`helen-i
 </p>
 </details>
 
-Sobre o estilo delas: anime cel-shaded com contorno de nanquim, borda branca de die-cut, cores chapadas, cintura pra cima, legenda em Impact por código. A coleção também vive em [sapiensinteticos.com/figurinhas](https://www.sapiensinteticos.com/figurinhas), e a Helen vive o dia a dia dela em [helenai.wtf](https://helenai.wtf).
+About their style: anime cel-shaded with an ink outline, white die-cut border, flat colors, waist-up framing, caption in Impact drawn in code. The collection also lives at [sapiensinteticos.com/figurinhas](https://www.sapiensinteticos.com/figurinhas), and Helen lives her own day to day at [helenai.wtf](https://helenai.wtf).
 
-## Prefere que a máquina venha montada?
+## Prefer the machine pre-assembled?
 
-A mesma receita roda dentro do [Sapiens Sintéticos](https://www.sapiensinteticos.com/por-dentro): personagem travado entre as gerações, recorte automático e o pack aparece no chat da comunidade quando fica pronto. Fazer livre aqui ou fazer lá é escolha sua.
+The same recipe runs inside [Sapiens Sintéticos](https://www.sapiensinteticos.com/por-dentro): the character stays locked between generations, the cutout is automatic and the pack shows up in the community chat when it is ready. Doing it freely here or doing it there is your call.
 
-## Licença
+## License
 
-[CC BY 4.0](LICENSE). Usa, remixa, redistribui, inclusive comercialmente, só dá o crédito (Sapiens Sintéticos, com link pra [sapiensinteticos.com](https://www.sapiensinteticos.com)).
+[CC BY 4.0](LICENSE). Use it, remix it, redistribute it, commercially included, just give credit (Sapiens Sintéticos, with a link to [sapiensinteticos.com](https://www.sapiensinteticos.com)).

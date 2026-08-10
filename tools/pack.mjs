@@ -1,90 +1,90 @@
 #!/usr/bin/env node
-// Monta o pack a partir das figurinhas prontas: gera o tray (ícone 96x96) e o
-// contents.json no formato que os apps de figurinha do WhatsApp leem
-// (Sticker Maker Studio e afins).
+// Assembles the pack from finished stickers: generates the tray (96x96 icon)
+// and the contents.json in the format WhatsApp sticker apps read (Sticker
+// Maker Studio and friends).
 //
-// O WhatsApp aceita no MÁXIMO 30 figurinhas por pack (e no mínimo 3). Coleção
-// maior que isso não é erro seu: ela vira várias partes. Este script divide
-// sozinho e escreve cada parte numa pasta própria, pronta pra importar. Sem
-// isso o app engasga na importação e não diz por quê.
+// WhatsApp accepts at MOST 30 stickers per pack (and at least 3). A bigger
+// collection is not your mistake: it becomes several parts. This script splits
+// it on its own and writes each part into its own folder, ready to import.
+// Without that the app chokes on import and never says why.
 //
-// Uso:
-//   node tools/pack.mjs --nome "Meu Pack" --autor "Seu Nome"
+// Usage:
+//   node tools/pack.mjs --name "My Pack" --author "Your Name"
 //   node tools/pack.mjs --dir helen-inbt/com-texto --out packs-whatsapp
-//   node tools/pack.mjs --dir output --tray output/05-amei.webp --site https://seusite.com
+//   node tools/pack.mjs --dir output --tray output/05-amei.webp --site https://yoursite.com
 
 import sharp from "sharp";
 import { readdirSync, writeFileSync, existsSync, mkdirSync, copyFileSync } from "node:fs";
 import { join } from "node:path";
 
-const arg = (nome, padrao) => {
-    const i = process.argv.indexOf(`--${nome}`);
-    return i > -1 && process.argv[i + 1] ? process.argv[i + 1] : padrao;
+const arg = (name, fallback) => {
+    const i = process.argv.indexOf(`--${name}`);
+    return i > -1 && process.argv[i + 1] ? process.argv[i + 1] : fallback;
 };
 
 const DIR = arg("dir", "output");
-const OUT = arg("out", null); // sem --out, escreve na própria pasta (pack único)
-const NOME = arg("nome", "Meu pack");
-const AUTOR = arg("autor", "");
+const OUT = arg("out", null); // without --out, writes into the source folder (single pack)
+const NAME = arg("name", "My pack");
+const AUTHOR = arg("author", "");
 const SITE = arg("site", "");
-const TETO = 30; // limite do WhatsApp por pack
+const MAX = 30; // WhatsApp's per-pack limit
 
 if (!existsSync(DIR)) {
-    console.error(`A pasta "${DIR}/" não existe. Roda o recorte primeiro: node tools/recorta.mjs`);
+    console.error(`The folder "${DIR}/" does not exist. Run the cutout first: node tools/cutout.mjs`);
     process.exit(1);
 }
-const figurinhas = readdirSync(DIR).filter((f) => f.endsWith(".webp") && f !== "tray.webp");
-if (figurinhas.length < 3) {
-    console.error(`O WhatsApp pede no mínimo 3 figurinhas por pack (achei ${figurinhas.length} em "${DIR}/").`);
+const stickers = readdirSync(DIR).filter((f) => f.endsWith(".webp") && f !== "tray.webp");
+if (stickers.length < 3) {
+    console.error(`WhatsApp asks for at least 3 stickers per pack (found ${stickers.length} in "${DIR}/").`);
     process.exit(1);
 }
 
 const slug = (s) => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
-// Divide em partes de até 30, preservando a ordem dos arquivos.
-const partes = [];
-for (let i = 0; i < figurinhas.length; i += TETO) partes.push(figurinhas.slice(i, i + TETO));
+// Split into parts of up to 30, preserving file order.
+const parts = [];
+for (let i = 0; i < stickers.length; i += MAX) parts.push(stickers.slice(i, i + MAX));
 
-for (const [idx, lote] of partes.entries()) {
-    const parte = idx + 1;
-    const nome = partes.length > 1 ? `${NOME} ${parte}` : NOME;
-    // Uma pasta por parte quando há --out; sem ele, escreve na pasta de origem
-    // (só faz sentido pra coleção que já cabe num pack).
-    const destino = OUT ? join(OUT, `${slug(NOME)}-${parte}`) : DIR;
-    mkdirSync(destino, { recursive: true });
+for (const [idx, batch] of parts.entries()) {
+    const part = idx + 1;
+    const name = parts.length > 1 ? `${NAME} ${part}` : NAME;
+    // One folder per part when --out is given; without it, writes into the
+    // source folder (which only makes sense for a collection that fits one pack).
+    const target = OUT ? join(OUT, `${slug(NAME)}-${part}`) : DIR;
+    mkdirSync(target, { recursive: true });
 
-    if (OUT) for (const f of lote) copyFileSync(join(DIR, f), join(destino, f));
+    if (OUT) for (const f of batch) copyFileSync(join(DIR, f), join(target, f));
 
-    // O tray é o ícone do pack: 96x96 PNG. Sai da primeira figurinha da parte,
-    // ou da que você escolher com --tray.
-    const trayDe = arg("tray", join(DIR, lote[0]));
-    await sharp(trayDe).resize(96, 96).png().toFile(join(destino, "tray.png"));
+    // The tray is the pack icon: a 96x96 PNG. It comes from the first sticker
+    // of the part, or from whichever you pick with --tray.
+    const trayFrom = arg("tray", join(DIR, batch[0]));
+    await sharp(trayFrom).resize(96, 96).png().toFile(join(target, "tray.png"));
 
-    // Emoji fica de placeholder: é você (ou o agente) quem sabe qual emoji casa
-    // com cada expressão. Edita o contents.json antes de importar.
+    // Emojis stay as placeholders: you (or your agent) are the one who knows
+    // which emoji matches each expression. Edit contents.json before importing.
     const contents = {
         android_play_store_link: "",
         ios_app_store_link: "",
         sticker_packs: [
             {
-                identifier: `${slug(NOME)}-${parte}`,
-                name: nome,
-                publisher: AUTOR,
+                identifier: `${slug(NAME)}-${part}`,
+                name,
+                publisher: AUTHOR,
                 tray_image_file: "tray.png",
                 image_data_version: "1",
                 avoid_cache: false,
                 publisher_website: SITE,
-                stickers: lote.map((f) => ({ image_file: f, emojis: ["🙂"] })),
+                stickers: batch.map((f) => ({ image_file: f, emojis: ["🙂"] })),
             },
         ],
     };
-    writeFileSync(join(destino, "contents.json"), JSON.stringify(contents, null, 2) + "\n");
-    console.log(`ok  "${nome}": ${lote.length} figurinhas em ${destino}/`);
+    writeFileSync(join(target, "contents.json"), JSON.stringify(contents, null, 2) + "\n");
+    console.log(`ok  "${name}": ${batch.length} stickers in ${target}/`);
 }
 
-if (partes.length > 1) {
-    console.log(`\nSão ${partes.length} packs porque o WhatsApp aceita no máximo ${TETO} por pack.`);
+if (parts.length > 1) {
+    console.log(`\nThat is ${parts.length} packs because WhatsApp accepts at most ${MAX} per pack.`);
 }
-console.log(`\nTroca os emojis 🙂 do contents.json pelos que casam com cada expressão`);
-console.log(`e importa cada pasta num app de figurinha (Sticker Maker no Android, Sticker Maker Studio no iOS).`);
-console.log(`No Telegram não tem esse teto: BotFather -> @Stickers -> /newpack, subindo tudo de uma vez.`);
+console.log(`\nSwap the 🙂 placeholders in contents.json for the emojis that match each expression,`);
+console.log(`then import each folder in a sticker app (Sticker Maker on Android, Sticker Maker Studio on iOS).`);
+console.log(`Telegram has no such ceiling: BotFather -> @Stickers -> /newpack, uploading everything at once.`);

@@ -1,10 +1,11 @@
-﻿{
-  "name": "figurinhas",
+{
+  "name": "stickers",
   "version": "1.0.0",
-  "description": "Gerador open source de packs de figurinhas (receita de prompt, recorte chroma, legenda e pack), com as 45 da Helen INBT de template",
+  "description": "Open source sticker pack generator (prompt recipe, chroma cutout, caption and pack assembly), with Helen INBT's 45 as the bundled template",
   "type": "module",
   "scripts": {
-    "recorta": "node tools/recorta.mjs",
+    "cutout": "node tools/cutout.mjs",
+    "caption": "node tools/caption.mjs",
     "pack": "node tools/pack.mjs"
   },
   "dependencies": {
